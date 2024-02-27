@@ -82,15 +82,18 @@ body {
 }
 
 .question:hover {
-  color: #ab27ed;
+  color: var(--purple);
 }
 
 .btn {
   cursor: pointer;
 }
 
-.answer {
+.close .answer {
   display: none;
+}
+
+.answer {
   transition: 0.3s all;
   line-height: 1.6;
   color: var(--grayish-purple);

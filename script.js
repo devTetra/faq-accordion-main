@@ -10,15 +10,12 @@ const absoluteSrc = src => {
 };
 
 const accToggle = el => {
-	const answer = el.parentElement.nextElementSibling;
+	const parent = el.parentElement.parentElement;
+	parent.classList.toggle('close');
 	const src = absoluteSrc(el.src);
-	if (src === './images/icon-plus.svg') {
-		el.src = './images/icon-minus.svg';
-		answer.style.display = 'block';
-	} else {
-		el.src = './images/icon-plus.svg';
-		answer.style.display = 'none';
-	}
+	src === './images/icon-plus.svg'
+		? (el.src = './images/icon-minus.svg')
+		: (el.src = './images/icon-plus.svg');
 };
 
 btns.forEach(btn => btn.addEventListener('click', () => accToggle(btn)));
@@ -28,9 +25,9 @@ questions.forEach(question =>
 	)
 );
 
-btns.forEach(btn => btn.addEventListener('touchstart', () => accToggle(btn)));
-questions.forEach(question =>
-	question.addEventListener('touchstart', () =>
-		accToggle(question.nextElementSibling)
-	)
-);
+// btns.forEach(btn => btn.addEventListener('touchstart', () => accToggle(btn)));
+// questions.forEach(question =>
+// 	question.addEventListener('touchstart', () =>
+// 		accToggle(question.nextElementSibling)
+// 	)
+// );
