@@ -1,0 +1,135 @@
+/* .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+} */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-pink: hsl(275, 100%, 97%);
+  --grayish-purple: hsl(292, 16%, 49%);
+  --dark-purple: hsl(292, 42%, 14%);
+  --gray: hsl(0, 3%, 94%);
+  --purple: hsl(280, 85%, 54%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--light-pink);
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Work Sans", sans-serif;
+}
+
+.bg {
+  min-width: 100vw;
+  min-height: 33vh;
+  background-image: url(./images/background-pattern-desktop.svg);
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+
+.main {
+  background-color: var(--white);
+  padding: 2.4rem;
+  width: 37vw;
+  border-radius: 9px;
+}
+
+.header {
+  display: flex;
+  gap: 2rem;
+}
+
+.heading {
+  font-size: 4.4rem;
+}
+
+.questions {
+  padding: 1.2rem 0;
+}
+
+.question-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+}
+
+.question {
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.question:hover {
+  color: #ab27ed;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.answer {
+  display: none;
+  transition: 0.3s all;
+  line-height: 1.6;
+  color: var(--grayish-purple);
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+hr {
+  border: none;
+  border-bottom: 1.5px solid var(--gray);
+}
+
+@media (max-width: 71em) {
+  .main {
+    width: 55%;
+  }
+}
+
+@media(max-width: 48em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .main {
+    width: 70%;
+  }
+
+  .bg {
+    background-image: url(./images/background-pattern-mobile.svg);
+  }
+}
+
+@media (max-width:34em) {
+
+  .main {
+    width: 75%;
+  }
+}
+
+/* .question:focus {
+  outline: 2px dashed red;
+} */
