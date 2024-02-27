@@ -28,7 +28,9 @@ questions.forEach(question =>
 	)
 );
 
-const body = document.querySelector('body');
-body.addEventListener('keydown', el => {
-	console.log(el);
-});
+btns.forEach(btn => btn.addEventListener('touchstart', () => accToggle(btn)));
+questions.forEach(question =>
+	question.addEventListener('touchstart', () =>
+		accToggle(question.nextElementSibling)
+	)
+);
