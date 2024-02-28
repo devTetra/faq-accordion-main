@@ -16,6 +16,7 @@ const accToggle = el => {
 	src === './images/icon-plus.svg'
 		? (el.src = './images/icon-minus.svg')
 		: (el.src = './images/icon-plus.svg');
+	console.log(src);
 };
 
 btns.forEach(btn => btn.addEventListener('click', () => accToggle(btn)));
