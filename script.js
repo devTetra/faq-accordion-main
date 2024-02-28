@@ -3,8 +3,8 @@ const btns = document.querySelectorAll('.btn');
 const questions = document.querySelectorAll('.question');
 
 const absoluteSrc = src => {
-	const read = src.includes('http')
-		? src.replace('http://127.0.0.1:5500', '.')
+	const read = src.includes('https')
+		? src.replace('https://devtetra.github.io/faq-accordion-main', '.')
 		: src;
 	return read;
 };
