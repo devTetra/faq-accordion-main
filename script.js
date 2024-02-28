@@ -6,7 +6,6 @@ const absoluteSrc = src => {
 	src = src.includes('icon-plus.svg')
 		? src.replace('icon-plus.svg', 'icon-minus.svg')
 		: src.replace('icon-minus.svg', 'icon-plus.svg');
-	console.log(src);
 	return src;
 };
 
@@ -23,9 +22,9 @@ questions.forEach(question =>
 	)
 );
 
-// btns.forEach(btn => btn.addEventListener('touchstart', () => accToggle(btn)));
-// questions.forEach(question =>
-// 	question.addEventListener('touchstart', () =>
-// 		accToggle(question.nextElementSibling)
-// 	)
-// );
+btns.forEach(btn => btn.addEventListener('touchstart', () => accToggle(btn)));
+questions.forEach(question =>
+	question.addEventListener('touchstart', () =>
+		accToggle(question.nextElementSibling)
+	)
+);
