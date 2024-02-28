@@ -6,6 +6,7 @@ const absoluteSrc = src => {
 	src = src.includes('icon-plus.svg')
 		? src.replace('icon-plus.svg', 'icon-minus.svg')
 		: src.replace('icon-minus.svg', 'icon-plus.svg');
+	console.log(src);
 	return src;
 };
 
